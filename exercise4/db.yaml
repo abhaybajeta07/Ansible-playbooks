@@ -1,17 +1,4 @@
 ---
-- name: Setup Webserver
-  hosts: websrvgrp
-  become: yes
-  tasks:
-    - name: Install Apache
-      yum:
-        name: httpd
-        state: present
-    - name: start and enable httpd
-      service:
-        name: httpd
-        state: started
-        enabled: yes
 
 - name: Setup Dbserver
   hosts: dbsrvgrp
@@ -26,3 +13,7 @@
         name: mariadb
         state: started
         enabled: yes
+    - name: Create a new database with name 'accounts'
+      mysql_db:
+        name: acounts
+        state: present
