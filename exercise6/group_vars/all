@@ -1,0 +1,4 @@
+# variable for all hosts in inventory file.
+dbuser: testadmin
+dbpass: admin123
+dbname: redhat
