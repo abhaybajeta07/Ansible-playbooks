@@ -8,6 +8,10 @@
       yum:
         name: mariadb-server
         state: present
+    - name: Install Python MySQL
+      yum:
+        name: MySQL-python
+        state: present
     - name: start and enable mariadb
       service:
         name: mariadb
