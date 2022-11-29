@@ -21,3 +21,9 @@
       mysql_db:
         name: acounts
         state: present
+    - name: Create database user with name 'admin'
+      mysql_user:
+        name: admin
+        password: 12345
+        priv: '*.*:ALL'
+        state: present
