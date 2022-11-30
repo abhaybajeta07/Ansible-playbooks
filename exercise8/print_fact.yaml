@@ -1,0 +1,7 @@
+---
+- name: Learning fact variables
+  host: all
+  tasks:
+    - name: print OS names
+      debug:
+        var: ansible_configuration
