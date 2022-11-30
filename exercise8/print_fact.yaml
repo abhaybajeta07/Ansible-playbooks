@@ -1,6 +1,6 @@
 ---
 - name: Learning fact variables
-  host: all
+  hosts: all
   tasks:
     - name: print OS names
       debug:
