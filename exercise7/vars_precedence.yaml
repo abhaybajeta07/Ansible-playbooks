@@ -1,0 +1,18 @@
+---
+- name: Understanding Presedence
+  hosts: all
+  become: yes
+#  vars:
+#    USRNM: playuser
+#    COMM: variable from playbook
+  tasks:
+    - name: create a User
+      user:
+        name: "{{USRNM}}"
+        comment: "{{COMM}}"
+      register: USROUT             #will store the value of output from above task
+
+    - debug:
+        var: USROUT.name
+    - debug:
+        var: USROUT.comment

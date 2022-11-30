@@ -2,3 +2,7 @@
 dbuser: testadmin
 dbpass: admin123
 dbname: redhat
+
+
+USRNM: globaluser
+COMM: value from group vars/all file
