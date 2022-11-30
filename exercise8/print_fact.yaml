@@ -4,4 +4,4 @@
   tasks:
     - name: print OS names
       debug:
-        var: ansible_configuration
+        var: ansible_distribution
