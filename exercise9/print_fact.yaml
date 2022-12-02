@@ -1,0 +1,10 @@
+---
+- name: Learning fact variables
+  hosts: all
+  tasks:
+    - name: print OS names
+      debug:
+        var: ansible_distribution
+    - name: print memory detail of remote host
+      debug:
+        var: ansible_memory_mb.real.free
