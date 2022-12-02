@@ -1,0 +1,16 @@
+---
+- name: provisioning server
+  hosts: all
+  become: yes
+  tasks:
+    - name: installing on Centos
+      yum:
+        name: ntp
+        state: present
+      when: ansible_distribution == "CentOS"
+
+    - name: installing on Ubuntu
+      yum:
+        name: ntp
+        state: present
+      when: ansible_distribution == "Ubuntu"
